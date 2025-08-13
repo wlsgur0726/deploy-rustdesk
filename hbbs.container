@@ -1,0 +1,12 @@
+[Container]
+AutoUpdate=registry
+Image=ghcr.io/rustdesk/rustdesk-server:latest
+Exec=hbbs
+Volume=%h/rustdesk-server-data:/root
+Network=host
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
